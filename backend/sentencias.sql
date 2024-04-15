@@ -1,13 +1,13 @@
 -- Creación de la tabla Categories
 CREATE TABLE Categories (
-    ID INT PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     Name VARCHAR(255),
     Description TEXT
 );
 
 -- Creación de la tabla Products
 CREATE TABLE Products (
-    ID INT PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     Name VARCHAR(255),
     Price INT,
     image VARCHAR(255),
@@ -32,13 +32,13 @@ CREATE TABLE IF NOT EXISTS saveTransaction (
       numberOfProducts INTEGER NOT NULL
 )
 -- categories
-INSERT INTO categories (ID, Name, Description) VALUES ('Balde', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
-INSERT INTO categories (ID, Name, Description) VALUES ('Tambor', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
-INSERT INTO categories (ID, Name, Description) VALUES ('Galón', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
-INSERT INTO categories (ID, Name, Description) VALUES ('Cuarto', 'Aceite tecnología sintética con 50% mayor protección contra el desgaste*.');
+INSERT INTO categories (Name, Description) VALUES ('Balde', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
+INSERT INTO categories (Name, Description) VALUES ('Tambor', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
+INSERT INTO categories (Name, Description) VALUES ('Galón', 'Aceite 100% sintético de extra alto rendimiento para motores diésel.');
+INSERT INTO categories (Name, Description) VALUES ('Cuarto', 'Aceite tecnología sintética con 50% mayor protección contra el desgaste*.');
 
 -- products
 
-INSERT INTO products (ID, Name, Price, image, Category_ID, Value, Stock, Creation_Date) VALUES (1, 'Mobiaal', 100000, 'https://res.cloudinary.com/dbtk64lp4/image/upload/v1713103540/xankse82jpdcvbwuh9wf.png', 1, 5, 'In Stock', '2021-10-10');
+INSERT INTO products (Name, Price, image, Category_ID, Value, Stock, Creation_Date) VALUES ( 'Mobiaal', 100000, 'https://res.cloudinary.com/dbtk64lp4/image/upload/v1713103540/xankse82jpdcvbwuh9wf.png', 1, 5, 'In Stock', '2021-10-10');
 
-INSERT INTO products (ID, Name, Price, image, Category_ID, Value, Stock, Creation_Date) VALUES (1, 'Mobil Delvac ModernTM 10W-40 Advanced Protection 2', 1000, 'https://res.cloudinary.com/dbtk64lp4/image/upload/v1713103540/xankse82jpdcvbwuh9wf.png', 500000, 5, 'In Stock', '2021-10-10');
+INSERT INTO products (Name, Price, image, Category_ID, Value, Stock, Creation_Date) VALUES ( 'Mobil Delvac ModernTM 10W-40 Advanced Protection 2', 1000, 'https://res.cloudinary.com/dbtk64lp4/image/upload/v1713103540/xankse82jpdcvbwuh9wf.png', 2, 5, 'In Stock', '2021-10-10');
