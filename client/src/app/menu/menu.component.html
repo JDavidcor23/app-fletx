@@ -1,0 +1,10 @@
+<!-- header.component.html -->
+<div class="contaner_fixed">
+  <div class="menu_component" [class.open]="isMenuOpen">
+    <img src="../../assets/menu/icons8-x-100.png" alt="" class="close_menu" (click)="toggleMenu()">
+    <a routerLink="/Home" (click)="toggleMenu()">Inicio</a>
+    <a routerLink="/Form" (click)="toggleMenu()">Editar productos</a>
+    <a routerLink="/Checkout" (click)="toggleMenu()">Pagar</a>
+    <a routerLink="/Categories" (click)="toggleMenu()">Categorias</a>
+  </div>
+</div>

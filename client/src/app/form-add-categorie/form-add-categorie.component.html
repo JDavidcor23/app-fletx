@@ -1,0 +1,12 @@
+<div class="product-form">
+  <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+    <h2>Agregar Producto</h2>
+
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" required>
+    <label for="name">Description:</label>
+    <input type="text" id="decription" name="description"  class="input_categorie" [(ngModel)]="description" required>
+
+    <button type="submit" class="button_red center">Guardar Categoria</button>
+  </form>
+</div>

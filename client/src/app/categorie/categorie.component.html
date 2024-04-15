@@ -1,0 +1,18 @@
+<div class="categories_container">
+  @for(item of categories; track item.name){
+  <div class="category">
+    <div class="category_info">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+    <div class="buttons_category">
+        <button class="button_red button_car button_edit" (click)="editCategorie(item)">
+          <span>Editar</span>
+        </button>
+          <button class="button_red button_delete_product" (click)="deleteCategorie(item.id)">
+            <span>Eliminar</span>
+          </button>
+    </div>
+  </div>
+  }
+</div>

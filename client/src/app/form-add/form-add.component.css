@@ -1,0 +1,39 @@
+.product-form {
+  background: white;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.center {
+  text-align: center;
+  justify-content: center;
+}
+.product-form {
+  margin: 0 auto;
+  width: 291px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.57);
+}

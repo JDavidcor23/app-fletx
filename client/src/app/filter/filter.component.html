@@ -1,0 +1,77 @@
+<div class="filter">
+  <div class="buttons_filters">
+    <div class="buttons_filters_button" (click)="toggleFilterBoxName($event)">
+      <p>Ver por</p>
+      <img src="../assets/filter/arrow_up.png" alt="">
+    </div>
+    <div class="buttons_filters_button" (click)="toggleFilterBoxPriceCategory($event)">
+      <p>Filtrar por</p>
+      <img src="../assets/filter/arrow_up.png" alt="">
+    </div>
+  </div>
+  <div class="filter_box" [class.hidden]="!showFilterBoxName && !showFilterBoxPriceCategory">
+    <form action="" class="filter_form">
+      <div class="filter_header">
+        <label for="">
+          Fitros
+        </label>
+        <button class="delete_filter" (click)="clearFilters()">
+          <img src="../assets/filter/trash.png" alt="">
+          <p>
+            Borrar filtros
+          </p>
+        </button>
+      </div>
+      <div [class.hiddenFilterBox]="!showFilterBoxName" class="references">
+        <label for="" class="labels_filters">Referencias</label>
+        <div class="references">
+          <div class="container">
+            <div class="radio">
+              <input id="radio-12" name="radio" type="radio" value="Legend 1340" (change)="applyFilters('name', 'Legend 1340')"
+                [(ngModel)]="filters.text" />
+              <label for="radio-12" class="radio-label">Legend 1340</label>
+            </div>
+          </div>
+          <div class="radio">
+            <input id="radio-8" name="radio" type="radio" value="Modern 10w -40" (change)="applyFilters('name', 'Modern 10w -40')"
+              [(ngModel)]="filters.text" />
+            <label for="radio-8" class="radio-label">Modern 10w -40</label>
+          </div>
+        </div>
+        <div class="radio">
+          <input id="radio-10" name="radio" type="radio" value="Modern" (change)="applyFilters('name', 'Modern')"
+            [(ngModel)]="filters.text" />
+          <label for="radio-10" class="radio-label">Modern</label>
+        </div>
+        <div class="radio">
+          <input id="radio-11" name="radio" type="radio" value="Legend" (change)="applyFilters('name', 'Legend')"
+            [(ngModel)]="filters.text" />
+          <label for="radio-11" class="radio-label">Legend</label>
+        </div>
+
+      </div>
+
+      <div [class.hiddenPriceCategory]="!showFilterBoxPriceCategory">
+        <label for="" class="labels_filters">Rango de precios</label>
+        <div class="range_filter">
+          <input type="range"  max="5000000" min="0" step="100000" (change)="applyFilters('price', $event)"
+            [(ngModel)]="filters.price" class="range_filter_input" />
+          <div class="range_filter_text">
+            <label for="" class="range_min">$0</label>
+            <label for="" class="range_max">$5.000.000</label>
+          </div>
+        </div>
+        <label for="" class="labels_filters">Presentación</label>
+
+        @if(categoriesResults$ | async; as categories){
+        @for (item of categories; track item.id) {
+        <div class="radio">
+          <input id="radio-{{item.id}}" name="radio" type="radio" (change)="applyFilters('category', item.id)"
+            [(ngModel)]="filters.category_id" value="{{item.id}}" />
+          <label for="radio-{{item.id}}" class="radio-label">{{item.name}}</label>
+        </div>
+        }
+        }
+      </div>
+    </form>
+  </div>

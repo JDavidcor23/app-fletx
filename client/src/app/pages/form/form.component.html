@@ -1,0 +1,16 @@
+<div>
+  <app-menu/>
+  <app-header/>
+  <div class="banner">
+    <img src="../assets/banner/banner.png" alt="">
+  </div>
+  <main>
+    @if(productsResults$ | async; as productsResults){
+      @if(categoriesResults$ | async; as categoriesResults){
+        <app-form-add [categories]="categoriesResults"></app-form-add>
+        <app-product-edit [products]="productsResults" [categories]="categoriesResults"></app-product-edit>
+      }
+    }
+  </main>
+  <app-footer />
+</div>

@@ -1,0 +1,30 @@
+<div class="container_header">
+  <header>
+    <div class="phone_info">
+      <img src="../../assets/header/call.png" alt="Logo" class="phone_logo">
+      <span>3155503500</span>
+    </div>
+    <div class="buttons_headers">
+      <button class="button_white">Inicia sesión</button>
+      <button class="button_red">
+        <img src="../../assets/header/user.png" alt="user" class="user_logo">
+        Regístrate
+      </button>
+    </div>
+  </header>
+  <nav>
+    <div class="menu" (click)="toggleMenu()">
+      <img src="../../assets/navbar/hamburger_menu.png" alt="" class="hamburger_menu">
+      <img src="../../assets/navbar/fletx_logo.png" alt="" class="fletx_logo">
+    </div>
+    <div class="info_nav">
+      <a routerLink="/Checkout">
+
+        <button class="shopping_cart">
+          <img src="../../assets/navbar/car.png" alt="">
+          <span>${{totalPrice}}</span>
+        </button>
+      </a>
+    </div>
+  </nav>
+</div>

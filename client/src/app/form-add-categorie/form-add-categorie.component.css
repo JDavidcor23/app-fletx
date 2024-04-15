@@ -1,0 +1,24 @@
+.product-form {
+  margin: 0 auto;
+  width: 291px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.57);
+}
+.product-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

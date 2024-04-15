@@ -1,0 +1,10 @@
+button.button_edit {
+  background-color: var(--bacground_footer_liner_blue);
+  width: 100px;
+}
+button.button_delete_product {
+  background-color: var(--red);
+  width: 100px;
+  height: 38px;
+  margin-left: 10px;
+}

@@ -1,0 +1,32 @@
+<div class="products">
+  @for(item of products; track item.name){
+  <div class="product">
+    <div class="images">
+      <img [srcset]="item.image" alt="" class="product_image">
+      <div class="eye_container">
+        <img src="../assets/products/eye.png" alt="">
+      </div>
+    </div>
+    <div class="info">
+      <h3>{{item.name}}</h3>
+      <p>
+        Cantidad: {{item.stock}}
+      </p>
+      <p>
+        {{ getCategoryDescription(item.category_id) }}
+      </p>
+    </div>
+    <p class="price">
+      ${{item.price}}
+    </p>
+    <div class="buttons_products">
+      <button class="button_red button_car button_edit" (click)="editProduct(item)">
+        <span>Editar</span>
+      </button>
+      <button class="button_red button_delete_product" (click)="deleteProduct(item.id)">
+        <span>ELiminar</span>
+      </button>
+    </div>
+  </div>
+  }
+</div>

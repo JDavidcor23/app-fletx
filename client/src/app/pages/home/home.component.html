@@ -1,0 +1,16 @@
+<div>
+  <app-header/>
+  <app-menu/>
+  <div class="banner">
+    <img src="../assets/banner/banner.png" alt="">
+  </div>
+  <main>
+    <app-filter />
+    @if(productsResults$ | async; as productsResults){
+      @if(categoriesResults$ | async; as categoriesResults){
+        <app-products [products]="productsResults" [categories]="categoriesResults"></app-products>
+      }
+    }
+  </main>
+  <app-footer />
+</div>

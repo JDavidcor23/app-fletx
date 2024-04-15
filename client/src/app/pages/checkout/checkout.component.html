@@ -1,0 +1,14 @@
+<div>
+  <app-menu/>
+  <app-header/>
+  <div class="banner">
+    <img src="../assets/banner/banner.png" alt="">
+  </div>
+  <main>
+    <app-form-pay/>
+    @if(productsResults$ | async; as productsResults){
+        <app-products [products]="productsResults"></app-products>
+    }
+  </main>
+  <app-footer />
+</div>

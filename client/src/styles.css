@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --bacground_footer_blue: #0d152e;
+  --bacground_footer_liner_blue: #0c1638;
+  --blue: #0c142e;
+  --red: #ff3c3a;
+  --white: #c7c7c7;
+  --red_shopping: #e6120e;
+  --gray: #f8f8f8;
+  --gray_border: #d5d5d5;
+  --border_product: #c0c0c0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+
+/*banner*/
+.banner > img {
+  padding-top: 135px;
+  width: 100%;
+  max-height: 850px;
+  object-fit: cover;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 120px;
+}
+.button_red {
+  background-color: var(--red);
+  color: white;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+/*product*/
+.products {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 750px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product {
+  display: flex;
+  width: 100%;
+  max-width: 291px;
+  height: 382px;
+  flex-direction: column;
+  border: 1px solid var(--border_product);
+  border-radius: 10px;
+  padding: 10px;
+}
+.product .images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.eye_container {
+  width: 40px;
+  height: 40px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 10px;
+}
+.eye_container img {
+  width: 20px;
+  height: 20px;
+}
+.product .product_image {
+  width: 100%;
+  max-width: 165px;
+}
+.button_car img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.button_favorive {
+  padding: 10px;
+  margin-right: 8px;
+}
+.button_favorive img {
+  width: 16px;
+  height: 16px;
+}
+.product .info h3 {
+  font-family: Hurme Geometric Sans 3;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 18px;
+  text-align: left;
+}
+.product .images,
+.product .info,
+.product .price,
+.product .buttons_products {
+  margin-top: 10px;
+}
+
+.product .price {
+  font-family: Open Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  color: var(--red);
+}
+.product .button_car {
+  width: 221px;
+  display: flex;
+  justify-content: center;
+}
+
+.product .button_car span {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.product .buttons_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+}

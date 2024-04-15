@@ -1,0 +1,117 @@
+/*footer*/
+.footer {
+  background-color: var(--bacground_footer_blue);
+  background-image: url("../../assets/footer/footer.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 22px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .container_logo_footer > img {
+  width: 177px;
+}
+.footer h3 {
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+.footer p {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  color: var(--white);
+}
+.footer p > span {
+  font-weight: 500;
+}
+.footer .subtitle_footer {
+  margin-top: 10px;
+}
+.footer li {
+  list-style: none;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  color: var(--white);
+}
+
+.footer .social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px 0px 0px 0px;
+}
+.footer .social_media .container_links_social_media {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 216px;
+  gap: 8px;
+}
+.footer .social_media .container_links_social_media a {
+  width: 48px;
+  height: 48px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .social_media .container_links_social_media a img {
+  width: 35px;
+  height: 35px;
+}
+.footer .politicies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.footer .politicies .links_politicies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  gap: 0px 8px;
+  margin: 20px 0px;
+}
+
+.footer .politicies .links_politicies a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.about_us_footer {
+  margin: 0 auto;
+}
+@media (width >= 590px) {
+  .footer .about_us_footer {
+    margin: 0px;
+  }
+}
