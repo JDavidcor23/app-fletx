@@ -1,4 +1,4 @@
-## Prerrequisitos
+## Pre requisitos
 Asegúrate de tener instalado lo siguiente:
 - Node.js
 - Docker
